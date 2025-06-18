@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book CITB Test Slot | CWS</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/citb.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div class="container">
+      <h1>Test Details</h1>
+
+      <label>Test Type</label>
+     <select required>
+        <option value="">Select Test Type</option>
+        <option value="Operative">Operative</option>
+        <option value="Managers and Professionals">Managers and Professionals</option>
+        <option value="Supervisors Test">Supervisors Test</option>
+        <option value="Working at Height Test">Working at Height Test</option>
+        <option value="Plumbing or Gas Test">Plumbing or Gas Test</option>
+        <option value="Highway Works Test">Highway Works Test</option>
+        <option value="Demolition Test">Demolition Test</option>
+        <option value="HVACR Test (Domestic Heating and Plumbing)">HVACR Test (Domestic Heating and Plumbing)</option>
+        <option value="HVACR Test (Ductwork)">HVACR Test (Ductwork)</option>
+        <option value="HVACR Test (Pipelifting and Welding)">HVACR Test (Pipelifting and Welding)</option>
+        <option value="HVACR Test (Refrigeration and Air Conditioning)">HVACR Test (Refrigeration and Air Conditioning)</option>
+        <option value="HVACR Test (Services and Facilities)">HVACR Test (Services and Facilities)</option>
+        <option value="Lift and Escalators Test">Lift and Escalators Test</option>
+        <option value="Tunnelling Test">Tunnelling Test</option>
+    </select>
+
+      <details style="margin: 15px 0;">
+        <summary style="color: purple; cursor: pointer; font-weight: bold;">
+          Not sure which test type to take?
+        </summary>
+        <div style="padding: 10px; background: #f9f9f9; border: 1px solid #ccc; border-radius: 5px; margin-top: 10px;">
+          <p>The most common test type is <strong>Operatives Test</strong>. The Operatives Test covers most trades &amp; CSCS Cards i.e.</p>
+          <p>
+            <strong>Labourers, Bricklayers, Carpenters, Painters &amp; Decorators, Groundworkers, Dry Liners, Floorers, Plasterers, Stone Fixers</strong> and many more. <br />
+            Suitable for: <strong>Green CSCS Card, Blue CSCS Card, Gold CSCS Card and Red CSCS Card.</strong>
+          </p>
+          <p>You may need to take another test type if you are any of the below:</p>
+          <ul>
+            <li>Manager or Professional = Managers &amp; Professionals Test (Black / White CSCS Cards)</li>
+            <li>Supervisor = Supervisor Test (Gold CSCS Card)</li>
+            <li>Plumber = Plumbing/Gas Test (Blue / Gold CSCS Card)</li>
+            <li>Demolition = Demolition Test (Red / Blue / Gold CSCS Card)</li>
+            <li>Highways = Highway Works Test (Blue / Gold CSCS Card)</li>
+            <li>Scaffolder / Roofer = Working at Height Test (Blue / Gold CSCS Card)</li>
+            <li>HVACR = HVACR Test</li>
+          </ul>
+        </div>
+      </details>
+
+      <label>Preferred Language (Optional)</label>
+      <input type="text" placeholder="Any special language preference">
+        <br>
+        <br>
+      <label>Nearest Test Centre (Optional)</label>
+       
+      
+      <div style="display: flex; gap: 10px;">
+          <input type="text" placeholder="Postcode">
+          <button style="padding: 10px 15px;">Find</button>
+      </div>
+        
+        <br>
+
+      <label>Test Centre</label>
+      <input type="text" placeholder="e.g. Manchester">
+
+      <h2>Test Slot Details</h2>
+
+      <label>Preferred Date</label>
+      <input type="date">
+
+      <label>Alternate Date</label>
+      <input type="date">
+
+      <p style="font-size: 12px;">* Dates are subject to availability, please select the alternate date in case your preferred date is not available</p>
+
+      <label>Preferred Time</label>
+      <select>
+          <option value="">Preferred Time</option>
+          <option value="Morning">Morning</option>
+          <option value="Afternoon">Afternoon</option>
+          <option value="Evening">Evening</option>
+
+      </select>
+
+      <div class="form-group checkbox">
+          <input type="checkbox" id="optInRetake">
+          <label for="optInRetake">Opt in for retake (*Additional charges apply)</label>
+      </div>
+
+      <div class="form-group checkbox">
+          <input type="checkbox" id="agreeDetails">
+          <label for="agreeDetails">I agree to the Terms and Conditions and Privacy Policy</label>
+      </div>
+
+      <div class="buttons">
+          <button type="button" onclick="history.back()">← Back</button>
+          <a href="citb-confirm-pay.html">
+            <button type="button">Proceed →</button>
+          </a>
+      </div>
+
+      <!-- FAQ section same as other page -->
+      <div class="faq">
+          <h3>What is CITB Health, Safety and Environment Test?</h3>
+          <p>
+              The CITB Test (Touchscreen test) is required to qualify for a CSCS Card...
+          </p>
+      </div>
+  </div>
+  <div id="footer"></div>
+  <div class="footer-note">© 2025 Construction Worker Support. All rights reserved.</div>
+  <script>
+    fetch('partials/header.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('header').innerHTML = data);
+
+    fetch('partials/footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book CITB Test | CWS</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Book a CITB Health, Safety and Environment test</h1>
+        <p>The CITB HS&E forms a key part of the requirement to obtain a CSCS Card. The price of a CITB HS&E Test is £22.50.</p>
+
+        <form>
+            <!-- Person Taking The Test -->
+            <div class="section-title">Person Taking The Test</div>
+
+            <label for="title">Title</label>
+            <select id="title" required>
+                <option value="">Select a Title</option>
+                <option>Mr</option>
+                <option>Mrs</option>
+                <option>Miss</option>
+                <option>Ms</option>
+                <option>Dr</option>
+            </select>
+
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" placeholder="First Name" required />
+
+            <label for="middleName">Middle Name</label>
+            <input type="text" id="middleName" placeholder="Middle Name" />
+
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" placeholder="Last Name" required />
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" required />
+
+            <label for="ni">National Insurance Number (Optional)</label>
+            <input type="text" id="ni" placeholder="e.g. QQ 12 34 56 C" />
+
+            <!-- Contact Details -->
+            <div class="section-title">Contact Details</div>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="+44 ..." required />
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="yourname@domain.com" required />
+
+            <!-- Address -->
+            <div class="section-title">Address</div>
+
+            <label for="address">House number and Street name</label>
+            <input type="text" id="address" required />
+
+            <label for="locality">Locality (Optional)</label>
+            <input type="text" id="locality" />
+
+            <label for="city">Town / City</label>
+            <input type="text" id="city" required />
+
+            <label for="county">County</label>
+            <input type="text" id="county" required />
+
+            <label for="postcode">Postcode</label>
+            <input type="text" id="postcode" required />
+
+            <!-- Agreement -->
+            <div class="form-group checkbox">
+          <input type="checkbox" id="agreeDetails">
+          <label for="agreeDetails">I agree to the Terms and Conditions and Privacy Policy</label>
+      </div>
+
+            <!-- Buttons -->
+            <div class="buttons">
+                <button type="button" onclick="history.back()">← Back</button>
+                <a href="citb-test-details.html">
+                    <button type="button">Proceed →</button>
+                </a>
+            </div>
+        </form>
+
+        <!-- FAQ -->
+        <div class="faq">
+            <h3>What is CITB Health, Safety and Environment Test?</h3>
+            <p>
+                The CITB Test (Touchscreen test) is required to qualify for a CSCS Card. The official name for the test is CITB Health, Safety, and Environment Test.
+                To book a CITB test you need to fill the form above and your test booking confirmation will be sent to you via email and phone.
+                Construction Worker Support (CWS) works exclusively with the construction industry and helps workers with proper guidance to achieve their construction cards.
+            </p>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <div class="footer-note">© 2025 Construction Worker Support. All rights reserved.</div>
+
+<script>
+  fetch('partials/header.html')
+    .then(res => res.text())
+    .then(data => document.getElementById('header').innerHTML = data);
+
+  fetch('partials/footer.html')
+    .then(res => res.text())
+    .then(data => document.getElementById('footer').innerHTML = data);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confirm and Pay - CITB Test | CWS</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/citb.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+  <div class="container">
+    <h1>Confirm and Pay - CITB Test</h1>
+    <p>Kindly review your booking details, and upon successful payment, your test will be booked and a confirmation will be sent to your email address.</p>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-top: 20px;">
+      
+      <!-- Left: Confirm Details -->
+      <div style="flex: 1; min-width: 300px; background: #fff8dc; padding: 20px; border-radius: 6px; border: 1px solid #ddd;">
+        <h2 style="font-size: 18px; margin-bottom: 10px;">Confirm Details</h2>
+        <p><strong>Email Address</strong><br>
+        gptusage25@gmail.com<br>
+        <small>Confirmation will be sent to this email</small></p>
+
+        <p><strong>Name</strong><br>
+        Mr. Omkar Pradeep Agawane</p>
+
+        <p><strong>Test Location</strong><br>
+        Manchester Test Centre<br>
+        <small>Complete Address will be sent via email</small></p>
+
+        <p><strong>Test Type</strong><br>
+        Managers and Professionals</p>
+
+        <p><strong>Test Date</strong><br>
+        Thu 26 June 2025</p>
+      </div>
+
+      <!-- Right: Price Options -->
+      <div style="flex: 1; min-width: 280px;">
+        <div class="form-group checkbox">
+          <input type="radio" id="testOnly" name="testOption" checked>
+          <label for="testOnly"><strong>Test Only</strong> - £45</label>
+          <p style="font-size: 14px; margin-left: 25px;">
+            The CITB Health &amp; Safety Test required for the application of CSCS Card. This test is valid for 2 years.
+          </p>
+        </div>
+
+        <div class="form-group checkbox">
+          <input type="radio" id="testRetake" name="testOption">
+          <label for="testRetake"><strong>Test + Retake</strong> - £65</label>
+          <p style="font-size: 14px; margin-left: 25px;">
+            You can opt-in for an additional free retake in case you fail in the first attempt. We recommend this if you are taking the CITB test for the first time.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Agree Terms -->
+    <div class="form-group checkbox">
+      <input type="checkbox" id="agreeConfirm">
+      <label for="agreeConfirm">I agree to the Terms and Conditions and Privacy Policy</label>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <button type="button" onclick="history.back()">← Back</button>
+      <button type="submit">Proceed →</button>
+    </div>
+
+    <!-- FAQ section -->
+    <div class="faq">
+      <h3>What is CITB Health, Safety and Environment Test?</h3>
+      <p>
+        The CITB Test (Touchscreen test) is required to qualify for a CSCS Card. The official name for the test is CITB Health, Safety, and Environment Test. To book a CITB test you need to fill the above form and your test booking confirmation will be sent to you via email and phone. Construction Worker Support (CWS) works exclusively with the construction industry and helps workers with proper guidance to achieve their construction cards.
+      </p>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <div class="footer-note">© 2025 Construction Worker Support. All rights reserved.</div>
+
+  <script>
+    fetch('partials/header.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('header').innerHTML = data);
+
+    fetch('partials/footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
+</body>
+</html>
