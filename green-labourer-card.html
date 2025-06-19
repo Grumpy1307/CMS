@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSCS Green Card - Labourers Card</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+
+<div id="header"></div>
+
+<div class="container">
+    <h1>CSCS Green Card</h1>
+    <p><a href="cscs-all-cards.html">Go to full card type list</a></p>
+    <p>You can conveniently apply for a CSCS Card via our <a href="#">online application service</a>.</p>
+
+    <!-- Top Section -->
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
+        <img src="images/GreenCard_1.jpg" alt="Green Card" style="max-width: 300px; border: 1px solid #ccc; border-radius: 6px;">
+
+        <div style="flex: 1; border: 1px solid #eee; padding: 20px; border-radius: 8px; background-color: #fafafa;">
+            <h3>Green Labourer Card</h3>
+            <p>Easy apply for CSCS Green Card - Labourers Card.</p>
+            <form>
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+                <input type="text" placeholder="Phone Number" required>
+                <input type="email" placeholder="Email" required>
+                <button type="submit" style="background-color: #0b3d91; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; margin-top: 10px;">Easy Apply</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Eligibility Section -->
+    <h2 style="margin-top: 40px;">Eligibility Requirements</h2>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 30px;">
+        <div style="flex: 1; min-width: 200px; border: 1px solid #eee; padding: 20px; border-radius: 8px; text-align: center;">
+            <h3>CITB Test (Operatives)</h3>
+            <button style="margin-top: 10px; background-color: #0b3d91; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;">Book Now</button>
+        </div>
+        <div style="flex: 1; min-width: 200px; border: 1px solid #eee; padding: 20px; border-radius: 8px; text-align: center;">
+            <h3>Health & Safety Awareness Course</h3>
+            <button style="margin-top: 10px; background-color: #0b3d91; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;">Book Now</button>
+        </div>
+    </div>
+
+    <!-- Validity Section -->
+    <h2>Validity</h2>
+    <p>New Application: <strong>2 years</strong></p>
+    <p>Renew Application: <strong>5 years</strong></p>
+
+    <!-- Application Guide -->
+    <h2 style="margin-top: 30px;">Labourer Card Renewal and Application Guidelines</h2>
+    <p>If your previous Labourer card has expired within one year, you can renew it for five years by providing proof of working in a labouring role.</p>
+    <p>If your previous card expired more than one year ago, you must submit an appeal with evidence of your work as a Labourer.</p>
+    <!-- Add full content from your screenshot here -->
+
+    <h2 style="margin-top: 30px;">How to replace your CSCS Green Card?</h2>
+    <p>Request a replacement for your lost, stolen or broken CSCS Card by submitting your details in the <a href="#">online application service</a>. ...</p>
+    <!-- Add full content from your screenshot here -->
+
+</div>
+
+<div id="footer"></div>
+
+<script>
+    fetch('partials/header.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+
+    fetch('partials/footer.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('footer').innerHTML = data);
+</script>
+
+</body>
+</html>
